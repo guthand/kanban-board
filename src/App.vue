@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" class="container-fluid">
+    <Header></Header>
     <img
       alt="Guthand logo"
       src="./assets/logo.png"
@@ -10,11 +11,13 @@
 
 <script>
 import KanbanBoard from './components/KanbanBoard.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-      KanbanBoard
+      KanbanBoard,
+      Header
   }
 }
 </script>
