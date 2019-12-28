@@ -16,3 +16,6 @@ taskBoard ->
 
     draggable is the component used when we need it to be dragged to another list
     inser the taskList componet in the taskBoard so we have the task inside of every list
+
+The responsibility of TaskListActions component -->  is to show Edit and Archive actions when user click on “…” in the list header.
+The Edit action allows user to edit list details and archive action allows the user to archive the list

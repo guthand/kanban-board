@@ -1,11 +1,7 @@
 <template>
   <div id="app" class="container-fluid">
     <Header></Header>
-    <img
-      alt="Guthand logo"
-      src="./assets/logo.png"
-    >
-    <kanban-board />
+    
   </div>
 </template>
 
