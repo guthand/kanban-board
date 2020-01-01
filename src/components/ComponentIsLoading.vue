@@ -13,3 +13,5 @@ export default {
     }
 }
 </script>
+
+//The mapGetters helper simply maps store getters to local computed properties:
