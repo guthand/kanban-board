@@ -6,6 +6,12 @@
             <span class="text-uppercase" v-show="this.activeBoard"> : {{ boardName }} </span>
         </label> 
         </router-link>
+        <div class="d-flex justify-content-end" v-if="!ComponentIsLoading">
+            <TaskListRestore></TaskListRestore>
+            <TaskListEdit></TaskListEdit>
+            <TaskBoardEdit></TaskBoardEdit>
+            <TaskListArchive></TaskListArchive>
+        </div>
     </nav>
 </template>
 

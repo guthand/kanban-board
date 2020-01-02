@@ -1,3 +1,5 @@
+For the task magement tool it is nice to implement a drag and drop functionality as it adds much more flexibility to the app...
+
 
 for the updates of the current items we will use draggable which allows us to drop items from one list to the next
 
@@ -7,6 +9,31 @@ transition component — provided by Vue.js — to show smooth page transitions.
 
 The import and export are ES6 way
 
+Application features
+This is a multi-page application with a rich feature set implemented right from the start. Below is the feature list of this app.
+
+Boards
+Allow user to,
+view existing boards in the dashboard
+archive and restore the boards
+view individual board contents
+create a new board
+edit existing board information
+
+Lists
+Allow user to,
+create a new list
+edit list name
+archive and restore lists
+rearrange the lists in the board using drag and drop
+
+List Items
+Allow user to,
+create new and update existing items in the list
+rearrange the items in the list by drag and drop
+move tasks among the lists using drag and drop
+
+in Vue js the Html is passed through the class of the div like
 
 header -> 
     router link is for running to the main page
