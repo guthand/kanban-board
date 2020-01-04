@@ -20,3 +20,5 @@ export default {
     name: 'Header'
 }
 </script>
+
+//if the app is not loading --> v-if="!ComponentIsLoading" then we pop in the UI the components that we listed in the div

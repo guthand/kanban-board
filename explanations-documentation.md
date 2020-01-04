@@ -37,6 +37,7 @@ in Vue js the Html is passed through the class of the div like
 
 header -> 
     router link is for running to the main page
+    We also have to render the components for the task list and the board and add or archive !!!!
 
 taskBoard -> 
     holds all the taks for each list-project

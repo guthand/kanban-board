@@ -6,7 +6,7 @@
         </template>
         <template v-slot:content>
         <form>
-            <h4>{{ heading }} </h4>
+            <h4> {{ heading }} </h4>
             <input 
                 name="listName"
                 type="text"
@@ -24,3 +24,7 @@
             </template>
     </DetailsPopup>
 </template>
+
+
+//handleTaskListSave allows the user to save the taskList in the interface
+//

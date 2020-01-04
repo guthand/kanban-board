@@ -14,7 +14,7 @@
                     v-validate="'required'"
                     data-vv-as="Board Name"
                     placeholder="Enter your board name"
-                    >
+                    />
                     <small class="text-danger" style="display:block"> {{errors.first("boardName")} } </small> 
                     <textarea
                         name="boardDescription"
@@ -25,14 +25,16 @@
                         data-vv-as="Board Description"
                         placeholder="Enter your board description"
                         ></textarea>
-                        <small class="text-danger" style="display:block">{{errors.first("boardDescription")}}</small>
+                        <small class="text-danger" style="display:block"> {{errors.first("boardDescription")}}</small>
                         <button class="btn btn-sm btn-app mt-2" @click.prevent="handleSaveBoard">
                             Save Board
                         </button>
+            
             </form>
         </template>
         </DetailsPopup>
 </template>
+
 
 
 //When user save the form, then handleSaveBoard method validates the form and 

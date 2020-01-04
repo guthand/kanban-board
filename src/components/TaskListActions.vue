@@ -11,4 +11,5 @@
     </template>
 
     //The Edit action allows user to edit list details and archive action allows the user to archive the list
-    //The responsibility of TaskListArchive component is to show a popup to confirm list archive action.
+    //The responsibility of TaskListArchive component is to show a popup to confirm list archive action.(archive actions are about the lists we archived)
+    //v-slot:handle It replaces the slot and slot-scope attributes,
