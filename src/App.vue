@@ -1,30 +1,37 @@
 <template>
-  <div id="app" class="container-fluid">
-    <Header></Header>
-      <transition name="page" mode="out-in" v-if="!isLoading">
-        <router-view></router-view>
-      </transition>
-      <ComponentIsLoading></ComponentIsLoading>
+  <div id="app">
+    <div class="page-header">
+      <h1>Guthand Board</h1>
+      <p class="lead">Below you will find the tasks</p>
+    </div>
+
+    <menu-bar></menu-bar>
+
+    <router-view/>
   </div>
 </template>
 
 <script>
-import KanbanBoard from './components/KanbanBoard.vue'
-import Header from './components/Header.vue'
-
+import MenuBar from '@/components/MenuBar';
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-      KanbanBoard,
-      Header
+    'menu-bar': MenuBar
   }
-}
+};
 </script>
 
-<style lang="scss">
-  @import './assets/app.scss';
+<style>
+.page-header h1 {
+  font-weight: 300;
+}
+.card {
+  margin-bottom: 10px;
+}
+.card:last-child {
+  margin-bottom: 25px;
+}
+.card-block {
+  padding: 15px;
+}
 </style>
-
-
-// Vue provides a transition wrapper component, allowing you to add entering/leaving transitions for any element or component in the following contexts:
-// router-view wrapped with transition is for smoother routing throughout the pages

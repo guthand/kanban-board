@@ -1,73 +1,60 @@
-For the task magement tool it is nice to implement a drag and drop functionality as it adds much more flexibility to the app...
+// store file contains the lists with the items
+// backlog contains the new item action and the backlog items
+// the kanbanboard contains all the tasks no matter where they are and you can move them from onw class to the other
+the menu bar could be our header
+// the new item form contains the method to create new tasks
+//the task lane contains the number of the items and the draggable action
+// the task lane item is imported in the taskLane
+// index in router contains the routing in the web app
+
+// 
 
 
-for the updates of the current items we will use draggable which allows us to drop items from one list to the next
+Backlog
 
-We’ll use !!!  Vue-Router  !!! library to build this multi-page application using <router-view> tag to display pages
+// v for items maps through the items
+// the items have their own id by numbers and we give their name
+//So how do we display state inside the store in our Vue components? 
+//Since Vuex stores are reactive, the simplest way to "retrieve" state from it is 
+//simply returning some store state from within a computed property(see above)
+//Whenever store.state.count changes, it will cause the computed property to re-evaluate, (as the DOM)
+ and trigger associated DOM updates.
 
-transition component — provided by Vue.js — to show smooth page transitions.
+ on line 42 on there are the methods on how to render the items which ew add
+  //itemlane is the status of the item
 
-The import and export are ES6 way
+KanbanBoard
 
-Application features
-This is a multi-page application with a rich feature set implemented right from the start. Below is the feature list of this app.
-
-Boards
-Allow user to,
-view existing boards in the dashboard
-archive and restore the boards
-view individual board contents
-create a new board
-edit existing board information
-
-Lists
-Allow user to,
-create a new list
-edit list name
-archive and restore lists
-rearrange the lists in the board using drag and drop
-
-List Items
-Allow user to,
-create new and update existing items in the list
-rearrange the items in the list by drag and drop
-move tasks among the lists using drag and drop
-
-in Vue js the Html is passed through the class of the div like
-
-header -> 
-    router link is for running to the main page
-    We also have to render the components for the task list and the board and add or archive !!!!
-
-taskBoard -> 
-    holds all the taks for each list-project
-
-    draggable is the component used when we need it to be dragged to another list
-    inser the taskList componet in the taskBoard so we have the task inside of every list
-
-TaskListActions component -->  is to show Edit and Archive actions when user click on “…” in the list header.
-The Edit action allows user to edit list details and archive action allows the user to archive the list
-
-TaskListEdit
-The responsibility of this component is to show a popup with the form to update list name.
-
-TaskListRestore
-The responsibility of this component is to show a popup with archived task lists. The component iterates over archivedLists array and shows task lists with a Restore button.
-
-TaskBoardEdit
-The responsibility of this component is to show a popup with the form to update the board name and description details.
+// kanban board contains the all the tasks we added divided in columns 
+// we also import and export standard things
+// we also use mapState to return the items of the list in the KanbanBoard as we refer in the backlog
 
 
+MenuBar
+
+// The menu bar is the header of the app 
+// contains the routes to the board and the backlog page to add tasks
+// Buttons for navigation and text display
+
+NewItemsForm
+
+// form to create new tasks
+// uses the post method to add the task to the form
+//submits to the backlog and to the todo list
+//a component’s data option must be a function, 
+//so that each instance can maintain an independent copy of the returned data object:
 
 
+  //TaskLane
 
-template syntax  allows you to declaratively bind the rendered DOM to the underlying Vue instance's data. ... js templates are valid HTML that can be parsed by spec-compliant browsers and HTML parsers. Under the hood, Vue compiles the templates into Virtual DOM render functions.
+//taskLane of the item is the status and its position
+//imported the draggable element so we can move items from one list to the other
+//counting the items with the conditional statement
+// we also use the setter and getter to update the items
 
+TaskLaneItem
 
-You can use the v-model directive to create two-way data bindings on form input, textarea, and select elements. It automatically picks the correct way to update the element based on the input type. Although a bit magical, v-model is essentially syntax sugar for updating data on user input events, plus special care for some edge cases.
-
-The directive v-if is used to conditionally render a block. The block will only be rendered if the directive’s expression returns a truthy value.
-
-v-show will always be rendered and remain in the DOM; v-show only toggles the display CSS property of the element.
-
-The mapGetters helper simply maps store getters to local computed properties:
+// definition of the laneItem
+// it is the component that can go from lane to lane
+// item passed as props to the list
+// its id is going according to the time of creation
