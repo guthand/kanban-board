@@ -1,24 +1,39 @@
 <template>
   <div id="app">
-    <img
-      alt="Guthand logo"
-      src="./assets/logo.png"
-    >
-    <kanban-board />
+    <div class="page-header">
+      <h1>Guthand Board</h1>
+      <p class="lead">
+        Below you will find the tasks
+      </p>
+    </div>
+
+    <menu-bar />
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import KanbanBoard from './components/KanbanBoard.vue'
-
+import MenuBar from '@/components/MenuBar';
 export default {
   name: 'App',
   components: {
-      KanbanBoard
+    'menu-bar': MenuBar
   }
-}
+};
 </script>
 
-<style lang="scss">
-  @import './assets/app.scss';
+<style>
+.page-header h1 {
+  font-weight: 300;
+}
+.card {
+  margin-bottom: 10px;
+}
+.card:last-child {
+  margin-bottom: 25px;
+}
+.card-block {
+  padding: 15px;
+}
 </style>
