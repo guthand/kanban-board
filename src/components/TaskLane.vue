@@ -1,16 +1,24 @@
 <template>
   <div class="card">
-      <h3 class="card-header">{{ title }}</h3>
-      <div class="card-body">
-        <draggable v-model="draggables" :options="{ group: 'default' }">
-          <div v-for="item in items" :key="item.id">
-              <item :item="item"></item>
-          </div>
-        </draggable>
-      </div>
-      <div class="card-footer text">
-          {{itemCount}}
-      </div>
+    <h3 class="card-header">
+      {{ title }}
+    </h3>
+    <div class="card-body">
+      <draggable
+        v-model="draggables"
+        :options="{ group: 'default' }"
+      >
+        <div
+          v-for="item in items"
+          :key="item.id"
+        >
+          <item :item="item" />
+        </div>
+      </draggable>
+    </div>
+    <div class="card-footer text">
+      {{ itemCount }}
+    </div>
   </div>
 </template>
 
@@ -19,11 +27,13 @@ import Draggable from 'vuedraggable';
 import TaskLaneItem from './TaskLaneItem';
 export default {
   name: 'TaskLane',
-  props: ['items', 'title', 'id'],
   components: {
     item: TaskLaneItem,
     draggable: Draggable
   },
+  props: {items: { type:String , default: 'items'},title: { type:String , default: 'title'}
+  ,id: { type:String , default: 'id'} },
+  
   computed: {
     itemCount() {
       if (!this.items) return '';

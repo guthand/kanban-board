@@ -2,19 +2,21 @@
   <div id="app">
     <div class="page-header">
       <h1>Guthand Board</h1>
-      <p class="lead">Below you will find the tasks</p>
+      <p class="lead">
+        Below you will find the tasks
+      </p>
     </div>
 
-    <menu-bar></menu-bar>
+    <menu-bar />
 
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 import MenuBar from '@/components/MenuBar';
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     'menu-bar': MenuBar
   }

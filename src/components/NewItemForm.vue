@@ -1,9 +1,17 @@
 <template>
-    <div class="add-item">
-        <form action="#" method="post" v-on:submit.prevent="submitForm">
-            <input type="text" v-model="itemText" placeholder="Add something to the backlog">
-        </form>
-    </div>
+  <div class="add-item">
+    <form
+      action="#"
+      method="post"
+      @submit.prevent="submitForm"
+    >
+      <input
+        v-model="itemText"
+        type="text"
+        placeholder="Add something to the backlog"
+      >
+    </form>
+  </div>
 </template>
 
 <script>

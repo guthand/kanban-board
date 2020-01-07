@@ -1,13 +1,17 @@
 <template>
   <div class="backlog-view">
-    <new-item></new-item>
+    <new-item />
 
-    <div class="card" v-for="item in items" :key="item.id">
+    <div
+      v-for="item in items"
+      :key="item.id"
+      class="card"
+    >
       <div class="card-block">
         <h5 class="card-title">
-          <span class="text"> #{{item.id}}</span>
-          {{item.text}}
-          <span :class="badgeClass(item)">{{badgeText(item)}}</span>
+          <span class="text"> #{{ item.id }}</span>
+          {{ item.text }}
+          <span :class="badgeClass(item)">{{ badgeText(item) }}</span>
         </h5>
       </div>
     </div>

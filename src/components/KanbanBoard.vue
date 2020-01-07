@@ -1,15 +1,27 @@
 <template>
   <div class="board">
     <div class="row">
-        <div class="col-md">
-          <task-lane id="todo" title="Todo" :items="todoItems"></task-lane>
-        </div>
-        <div class="col-md">
-          <task-lane id="inProgress" title="In progress" :items="inProgressItems"></task-lane>
-        </div>
-        <div class="col-md">
-          <task-lane id="done" title="Done" :items="doneItems"></task-lane>
-        </div>
+      <div class="col-md">
+        <task-lane
+          id="todo"
+          title="Todo"
+          :items="todoItems"
+        />
+      </div>
+      <div class="col-md">
+        <task-lane
+          id="inProgress"
+          title="In progress"
+          :items="inProgressItems"
+        />
+      </div>
+      <div class="col-md">
+        <task-lane
+          id="done"
+          title="Done"
+          :items="doneItems"
+        />
+      </div>
     </div>
   </div>
 </template>
